@@ -74,6 +74,16 @@ fun BookList(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
+        item{
+            Text(
+                text = "Total Books: ${books.size}",
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp)
+
+            )}
         items(books) { book ->
             BookItem(book = book)
         }
